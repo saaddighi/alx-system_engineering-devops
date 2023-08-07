@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -f *root PATTERN /etc/passwd
+grep *root PATTERN /etc/passwd
