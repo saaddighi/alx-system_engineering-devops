@@ -1,2 +1,2 @@
 #!/bin/bash
-find /etc/passwd *root
+grep -f *root PATTERN /etc/passwd
