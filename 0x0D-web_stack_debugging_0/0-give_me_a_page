@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Configures an Nginx server to listen on port 80.
+# Turned on Apache Server with this magic line
 
-rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
-
+echo "ServerName localhost" >> /etc/apache2.conf
+service apache2 start
