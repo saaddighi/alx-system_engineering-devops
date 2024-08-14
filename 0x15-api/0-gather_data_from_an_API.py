@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import requests 
+import requests
 import json
 
 response = requests.get('https://jsonplaceholder.typicode.com/todos')
@@ -24,6 +24,5 @@ for users in response_txt2:
         if todo["userId"] == int(id) and todo["completed"] == True:
             user1.append(todo["title"])
             done_tasks = str(len(user1))
-        
+
     print(f'Employee {EMPLOYEE_NAME} is done with tasks({done_tasks}/{tasks}):\n{user1}')
-    
