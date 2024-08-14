@@ -13,7 +13,7 @@ user1 = []
 tot_taks = []
 
 for users in response_txt2:
-    EMPLOYEE_NAME = users['name']
+    EMPLOYEE = users['name']
     id = users['id']
     for todo in response_txt:
         tasks = 0
@@ -23,6 +23,6 @@ for users in response_txt2:
 
         if todo["userId"] == int(id) and todo["completed"] == True:
             user1.append(todo["title"])
-            done_tasks = str(len(user1))
+            done = str(len(user1))
 
-    print(f'Employee {EMPLOYEE_NAME} is done with tasks({done_tasks}/{tasks}):\n{user1}')
+    print(f'Employee {EMPLOYEE} is done with tasks({done}/{tasks}):\n{user1}')
