@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import requests
 import json
+import requests
 
 response = requests.get('https://jsonplaceholder.typicode.com/todos')
 response2 = requests.get('https://jsonplaceholder.typicode.com/users')
