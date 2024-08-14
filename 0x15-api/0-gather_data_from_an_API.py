@@ -21,7 +21,7 @@ for users in response_txt2:
             tot_taks.append(todo["title"])
             tasks = len(tot_taks)
 
-        if todo["userId"] == int(id) and todo["completed"] == True:
+        if todo["userId"] == int(id) and todo["completed"] is True:
             user1.append(todo["title"])
             done = str(len(user1))
 
