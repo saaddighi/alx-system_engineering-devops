@@ -2,6 +2,7 @@
 
 import json
 import requests
+from sys import argv
 
 response = requests.get('https://jsonplaceholder.typicode.com/todos')
 response2 = requests.get('https://jsonplaceholder.typicode.com/users')
@@ -12,9 +13,8 @@ response_txt2 = json.loads(response2.text)
 user1 = []
 tot_taks = []
 
-for users in response_txt2:
-    EMPLOYEE = users['name']
-    id = users['id']
+if __name__ == "__main__":
+    id = argv[1]
     for todo in response_txt:
         tasks = 0
         if todo["userId"] == int(id):
