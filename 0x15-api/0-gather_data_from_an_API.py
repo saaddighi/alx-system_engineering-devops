@@ -31,7 +31,7 @@ if __name__ == "__main__":
     id = argv[1]
     for usr in response_txt2:
         if usr['id'] == id:
-            EMPLOYEE = user['name']
+            EMPLOYEE = usr['name']
     for todo in response_txt:
         tasks = 0
         if todo["userId"] == int(id):
@@ -42,4 +42,4 @@ if __name__ == "__main__":
             user1.append(todo["title"])
             done = str(len(user1))
 
-    print(f'Employee {EMPLOYEE} is done with tasks({done}/{tasks}):\n{user1}')
+    print(f'Employee {EMPLOYEE} is done with tasks({done}/{tasks}):\n{" ".join(str(element) for element in user1)}')
