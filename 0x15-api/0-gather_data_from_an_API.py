@@ -18,12 +18,6 @@ import json
 import requests
 from sys import argv
 
-# The rest of your code would go here...
-
-import json
-import requests
-from sys import argv
-
 response = requests.get('https://jsonplaceholder.typicode.com/todos')
 response2 = requests.get('https://jsonplaceholder.typicode.com/users')
 
