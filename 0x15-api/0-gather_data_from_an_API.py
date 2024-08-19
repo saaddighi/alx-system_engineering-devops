@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 
 import json
+"json module to read json files"
 import requests
+"to GET data from the api"
 from sys import argv
+"sys module for the script to have a argument"
 
 response = requests.get('https://jsonplaceholder.typicode.com/todos')
 response2 = requests.get('https://jsonplaceholder.typicode.com/users')
