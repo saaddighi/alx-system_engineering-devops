@@ -2,15 +2,15 @@
 
 """
 Modules:
-    - json: Provides functions to parse JSON strings and convert 
+    - json: Provides functions to parse JSON strings and convert
     Python objects into JSON strings.
-    - requests: Allows sending HTTP/1.1 requests with 
+    - requests: Allows sending HTTP/1.1 requests with
     methods such as GET and POST.
-    - sys: Provides access to some variables used or 
+    - sys: Provides access to some variables used or
     maintained by the Python interpreter, including `argv`.
 
 Usage:
-    The script can be run with command-line arguments passed via `sys.argv`. 
+    The script can be run with command-line arguments passed via `sys.argv`.
     It typically makes HTTP requests and processes JSON responses.
 """
 
