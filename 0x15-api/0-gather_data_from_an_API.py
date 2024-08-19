@@ -29,6 +29,9 @@ tot_taks = []
 
 if __name__ == "__main__":
     id = argv[1]
+    for usr in response_txt2:
+        if usr['id'] == id:
+            EMPLOYEE = user['name']
     for todo in response_txt:
         tasks = 0
         if todo["userId"] == int(id):
