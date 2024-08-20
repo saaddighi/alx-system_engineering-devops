@@ -33,8 +33,9 @@ if __name__ == "__main__":
         if usr['id'] == id:
             EMPLOYEE = usr['name']
     for todo in response_txt:
-        tasks = 0
+        
         if todo["userId"] == id:
+            tasks = 0
             tot_taks.append(todo["title"])
             tasks = len(tot_taks)
 
