@@ -28,9 +28,8 @@ user1 = []
 tot_taks = []
 
 if __name__ == "__main__":
-    id = argv[1]
+    id = sys.argv
     for usr in response_txt2:
-        id = argv[1]
         if usr['id'] == id:
             EMPLOYEE = usr['name']
     for todo in response_txt:
