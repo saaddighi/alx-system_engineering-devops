@@ -16,7 +16,7 @@ Usage:
 
 import json
 import requests
-from sys import argv
+import sys
 
 response = requests.get('https://jsonplaceholder.typicode.com/todos')
 response2 = requests.get('https://jsonplaceholder.typicode.com/users')
