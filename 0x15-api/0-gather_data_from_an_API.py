@@ -38,7 +38,7 @@ if __name__ == "__main__":
             tot_taks.append(todo["title"])
             tasks = len(tot_taks)
 
-        if todo["userId"] == int(id) and todo["completed"] is True:
+        if todo["userId"] == id and todo["completed"] is True:
             user1.append(todo["title"])
             done = str(len(user1))
 
