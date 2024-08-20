@@ -28,7 +28,7 @@ user1 = []
 tot_taks = []
 
 if __name__ == "__main__":
-    id = sys.argv[1]
+    id = int(sys.argv[1])
     for usr in response_txt2:
         if usr['id'] == id:
             EMPLOYEE = usr['name']
