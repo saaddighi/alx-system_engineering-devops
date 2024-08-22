@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 
 """
 Modules:
@@ -42,5 +42,5 @@ if __name__ == "__main__":
             user1.append(todo["title"])
             done = str(len(user1))
 
-    user1 = " ".join(str(element) for element in user1)
+    user1 = "\t" + "\n\t".join(user1)
     print(f'Employee {EMPLOYEE_NAME} is done with tasks({done}/{tasks}):\n{user1}')
