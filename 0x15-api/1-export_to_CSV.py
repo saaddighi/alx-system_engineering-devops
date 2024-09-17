@@ -35,7 +35,7 @@ if __name__ == "__main__":
         if todo["userId"] == USER_ID:
             TASK_TITLE = todo["title"]
             TASK_COMPLETED_STATUS = todo["completed"]
-            row = USER_ID,USERNAME,TASK_COMPLETED_STATUS,TASK_TITLE
+            row = USER_ID, USERNAME, TASK_COMPLETED_STATUS, TASK_TITLE
             tot_taks.append(row)
 
         with open('USER_ID.csv', mode='w', newline='') as file:
