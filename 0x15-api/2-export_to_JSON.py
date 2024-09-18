@@ -27,7 +27,7 @@ if __name__ == "__main__":
     username = user.get('username')
     todos = requests.get(response, params={"userId": USER_ID}).json()
 
-    data = {f'{USER_ID}': [{"task": t.get("title"), "completed":
+    data = {USER_ID: [{"task": t.get("title"), "completed":
             t.get("completed"), "username": f"{username}"}for t in todos]}
 
     with open(f'{USER_ID}.json', 'w', newline='') as jsonfile:
