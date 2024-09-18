@@ -21,16 +21,12 @@ import sys
 response = 'https://jsonplaceholder.typicode.com/todos'
 response2 = 'https://jsonplaceholder.typicode.com/users'
 
-
-
-tot_taks = []
-
 if __name__ == "__main__":
     USER_ID = sys.argv[1]
     user = requests.get((response2 + f'/{USER_ID}')).json()
     username = user.get('username')
     todos = requests.get(response, params={"userId": USER_ID}).json()
-    
+
     with open(f'{USER_ID}.csv', "w", newline="") as file :
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         [writer.writerow(
