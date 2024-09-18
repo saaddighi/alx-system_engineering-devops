@@ -22,18 +22,17 @@ response = 'https://jsonplaceholder.typicode.com/todos'
 response2 = 'https://jsonplaceholder.typicode.com/users'
 
 if __name__ == "__main__":
-    url = requests.get(response2 ).json()
+    url = requests.get(response2).json()
     USER_ID = [i.get('id') for i in url]
     for us in USER_ID:
         user = requests.get(response2 + f'/{us}').json()
         use = user.get('id')
-    
+
     username = user.get('username')
     todos = requests.get(response, params={"userId": USER_ID}).json()
 
     data = {use: [{"task": t.get("title"), "completed":
             t.get("completed"), "username": f"{username}"}for t in todos]}
-    
 
     with open('todo_all_employees.json', 'w', newline='') as jsonfile:
         json.dump(data, jsonfile)
