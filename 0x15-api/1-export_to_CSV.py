@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 """
 Modules:
     - json: Provides functions to parse JSON strings and convert
@@ -26,7 +26,7 @@ response2 = 'https://jsonplaceholder.typicode.com/users'
 tot_taks = []
 
 if __name__ == "__main__":
-    USER_ID = 2
+    USER_ID = sys.argv[1]
     user = requests.get((response2 + f'/{USER_ID}')).json()
     username = user.get('username')
     todos = requests.get(response, params={"userId": USER_ID}).json()
