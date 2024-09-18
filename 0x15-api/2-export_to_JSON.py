@@ -30,5 +30,5 @@ if __name__ == "__main__":
     data = {f'{USER_ID}': [{"task": t.get("title"), "completed":
             t.get("completed"), "username": f"{username}"}for t in todos]}
 
-    with open(f'{USER_ID}.json', 'w', newline='') as file:
-        json.dump(data, file)
+    with open(f'{USER_ID}.json', 'w', newline='') as jsonfile:
+        json.dump(data, jsonfile)
