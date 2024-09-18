@@ -27,10 +27,8 @@ if __name__ == "__main__":
     username = user.get('username')
     todos = requests.get(response, params={"userId": USER_ID}).json()
 
-    with open(f'{USER_ID}.csv', "w", newline="") as file :
+    with open(f'{USER_ID}.csv', "w", newline="") as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         [writer.writerow(
             [USER_ID, username, t.get("completed"), t.get("title")]
          ) for t in todos]
-    
-            
