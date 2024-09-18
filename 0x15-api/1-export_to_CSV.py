@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """
 Modules:
     - json: Provides functions to parse JSON strings and convert
@@ -18,27 +18,23 @@ import json
 import requests
 import sys
 
-response = requests.get('https://jsonplaceholder.typicode.com/todos')
-response2 = requests.get('https://jsonplaceholder.typicode.com/users')
+response = 'https://jsonplaceholder.typicode.com/todos'
+response2 = 'https://jsonplaceholder.typicode.com/users'
 
-response_txt = json.loads(response.text)
-response_txt2 = json.loads(response2.text)
+
 
 tot_taks = []
 
 if __name__ == "__main__":
-    USER_ID = int(sys.argv[1])
-    for usr in response_txt2:
-        if usr['id'] == USER_ID:
-            USERNAME = usr['username']
-    for todo in response_txt:
-        if todo["userId"] == USER_ID:
-            TASK_TITLE = todo["title"]
-            TASK_COMPLETED_STATUS = todo["completed"]
-            row = USER_ID, USERNAME, TASK_COMPLETED_STATUS, TASK_TITLE
-            tot_taks.append(row)
-
-        with open('USER_ID.csv', mode='w', newline='') as file:
-            writer = csv.writer(file)
-            for row in tot_taks:
-                writer.writerows(tot_taks)
+    USER_ID = 2
+    user = requests.get((response2 + f'/{USER_ID}')).json()
+    username = user.get('username')
+    todos = requests.get(response, params={"userId": USER_ID}).json()
+    
+    with open(f'{USER_ID}.csv', "w", newline="") as file :
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
+        [writer.writerow(
+            [user_id, username, t.get("completed"), t.get("title")]
+        ) for t in todos]
+    
+            
