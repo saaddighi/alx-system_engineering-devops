@@ -33,7 +33,7 @@ if __name__ == "__main__":
         todos = requests.get(response, params={"userId": us}).json()
 
         all_data[us] = [{"task": t.get("title"), "completed":
-        t.get("completed"), "username": username} for t in todos]
+                         t.get("completed"), "username": username} for t in todos]
 
     with open('todo_all_employees.json', 'w', newline='') as jsonfile:
         json.dump(all_data, jsonfile)
