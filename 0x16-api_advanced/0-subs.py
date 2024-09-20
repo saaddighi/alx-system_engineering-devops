@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """
 Script to interact with the Reddit API using PRAW (Python Reddit API Wrapper).
+
+praw: Python Reddit API Wrapper (PRAW) is a Python package that provides a simple 
+interface for accessing Reddit's API.
+
 """
 import praw
 
