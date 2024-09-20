@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Script to interact with the Reddit API using PRAW (Python Reddit API Wrapper).
 
@@ -11,6 +12,7 @@ Usage :
         - Get the number of subscribers in a specific subreddit.
         - Fetch posts (hot and new) from a given subreddit.
 """
+
 import praw
 
 if __name__ == "__main__":
