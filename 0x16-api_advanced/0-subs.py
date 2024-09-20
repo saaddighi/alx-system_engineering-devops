@@ -4,7 +4,12 @@ Script to interact with the Reddit API using PRAW (Python Reddit API Wrapper).
 
 praw: Python Reddit API Wrapper (PRAW) is a Python package that provides a simple 
 interface for accessing Reddit's API.
-
+Usage :
+        - This script demonstrates how to:
+        - Authenticate with Reddit’s API.
+        - Retrieve information about a subreddit.
+        - Get the number of subscribers in a specific subreddit.
+        - Fetch posts (hot and new) from a given subreddit.
 """
 import praw
 
