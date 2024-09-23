@@ -1,18 +1,15 @@
 #!/usr/bin/python3
-"requetsts module to make HTTP requests"
+"subscribers count"
 
 import requests
 
-def number_of_subscribers(subreddit):
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {"User-Agent": "alx_project"}
-    response = requests.get(url, headers, allow_redirects=False)
-    
-    if response.status_code == 200:
-        data = response.json()
-        d = data.get("data")
-        subscriber_count = d.get("subscribers")
-    else:
-        subscriber_count = 0      
 
-    return subscriber_count
+def number_of_subscribers(subreddit):
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    data = response.json()
+    if response.status_code != 200:
+        return 0
+    else:
+        return data['data']['subscribers']
