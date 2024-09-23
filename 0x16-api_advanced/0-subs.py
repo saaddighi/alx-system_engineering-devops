@@ -1,4 +1,5 @@
-
+#!/usr/bin/python3
+"requetsts module to make HTTP requests"
 
 import requests
 
@@ -9,8 +10,10 @@ def number_of_subscribers(subreddit):
     
     if response.status_code == 200:
         data = response.json()
-        subscriber_count = data["data"]["subscribers"]
+        d = data.get("data")
+        subscriber_count = d.get("subscribers")
     else:
         subscriber_count = 0
         
-    return subscriber_count        
+    return subscriber_count  
+number_of_subscribers('python')
