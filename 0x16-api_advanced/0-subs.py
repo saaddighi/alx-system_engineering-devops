@@ -9,10 +9,11 @@ def number_of_subscribers(subreddit):
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(url, headers, allow_redirects=False)
 
-    if response.status_code == 200:
+    try:
         data = response.json()
         subscriber_count = data["data"]["subscribers"]
-    else:
+    except:
         subscriber_count = 0
 
     return subscriber_count
+
