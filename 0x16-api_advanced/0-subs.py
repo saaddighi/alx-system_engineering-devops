@@ -15,5 +15,4 @@ def number_of_subscribers(subreddit):
     except:
         subscriber_count = 0
 
-    return subscriber_count
-
+    return int(subscriber_count)
